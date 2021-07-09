@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #ff8000;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    font-size: 35px;
+    margin-top: 20px;
+    color: #FFF;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search input{
+    height: 35px;
+    width: 300px;
+    border: none;
+    padding: 15px
+}
+
+.search button{
+    margin-top: 10px;
+    height: 35px;
+    width: 100px;
+    border: none;
+    background: #FFF;
+}
+
+.results{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.results h2{
+    font-size: 30px;
+    color: #FFF
+}
+
+#data-table{
+    margin-top: 20px;
+}
+
+#data-table th{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#data-table td{
+    font-size: 20px;
+    padding: 8px;
+}
+
+/* Modal */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #f0f2f5;
+    width: 50%;
+    max-width: 500px;
+}
+
+#previsao{
+    height: 300px;
+    max-width: 500px;
+    max-height: 300px;
+    margin: 55px 50px 15px 50px;
+    color: #505050;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#ff8000
+}
+
+#previsao h3{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#previsao #descricao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+#previsao #descricao p{
+    margin-inline: 10px;
+}
+
+#previsao #descricao .descricao{
+    text-transform: capitalize;
+}
+
+#previsao .temp{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px 5px 15px;
+}
+
+#previsao .temp p{
+    margin:  0 10px 0 10px;
+    font-weight: 300;
+}
+
+#previsao .temp i{
+    color: #ff8000;
+}
+
+#previsao span{
+    font-weight: bold;
+}

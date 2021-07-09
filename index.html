@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2f8ee816b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Previsão do tempo</h1>
+
+        <section class="search">
+            <form id="formulario">
+                <input id="cidade" type="text" placeholder="Insira aqui o nome da cidade">
+                <button id="pesquisar" onclick="Modal.open(event)">Pesquisar</button>
+            </form>
+        </section>
+
+        <section class="results">
+            <h2>Capitais</h2>
+
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Min</th>
+                        <th>Máx</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="saoPaulo">
+                        <td class="min">10°</td>
+                        <td class="max">10°</td>
+                        <td class="saoPaulo">São Paulo</td>
+                    </tr>
+                    <tr id="rio">
+                        <td class="min">10°</td>
+                        <td class="max">10°</td>
+                        <td class="rio">Rio de Janeiro</td>
+                    </tr>
+                    <tr id="beloHorizonte">
+                        <td class="min">10°</td>
+                        <td class="max">10°</td>
+                        <td class="beloHorizonte">Belo Horizonte</td>
+                    </tr>
+                    <tr id="brasilia">
+                        <td class="min">10°</td>
+                        <td class="max">10°</td>
+                        <td class="brasilia">Brasília</td>
+                    </tr>
+                    <tr id="maceio">
+                        <td class="min">10°</td>
+                        <td class="max">10°</td>
+                        <td class="maceio">Maceió</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="previsao">
+                <div class="header">
+                    <h3 class="cidade">São Paulo</h3>
+                    <a 
+                        onclick="Modal.close()"
+                        href="#"
+                        class="button cancel"
+                    >
+                        X
+                    </a>
+                </div>
+                <div id="descricao">
+                    <p class="temperatura">20°C</p>
+                    <p class="descricao">Nublado</p>
+                </div>
+                <div class="temp">
+                    <p class="minima"><i class="fas fa-arrow-down"></i> <span>16°</span></p>
+                    <p class="maxima"><i class="fas fa-arrow-up"></i> <span>25°</span></p>
+                    <p class="sensacao">Sensação <span>19°</span></p>
+                </div>
+
+                <div class="temp">
+                    <p class="vento">Vento <span>18Km/h</span></p>
+                    <p class="umidade">Umidade <span>89%</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
